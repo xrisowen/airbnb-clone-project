@@ -7,4 +7,10 @@ Python, Django, Django REST Framework, PostgreSQL, GraphQL, Docker, Jenkins
 
 ## Database Design
 
+## Feature Breakdown
+
+## API Security
+
+## CI/CD Pipeline
+
 ## Team Roles
