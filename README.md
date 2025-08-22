@@ -1,6 +1,6 @@
 # Airbnb Clone Project
 
-The Airbnb Clone Project is a backend-stack web application that replicates the core features of Airbnb. It emphasizes backend systems, database modeling, API design, and security best practices, providing hands-on experience in building scalable and production-ready platforms. The project also highlights real-world software development workflows and collaborative team practices.
+The Airbnb Clone Project is a full-stack web application that replicates the core features of Airbnb. It emphasizes backend systems, database modeling, API design, and security best practices, providing hands-on experience in building scalable and production-ready platforms. The project also highlights real-world software development workflows and collaborative team practices.
 
 ## Team Roles
 The success of the Airbnb Clone Project depends on effective collaboration across different roles within the team. Each member contributes unique expertise to ensure the application is reliable, scalable, and secure.
@@ -92,7 +92,56 @@ Entities and Fields
 + A Property can have multiple Reviews, each written by different Users.
 
 ## Feature Breakdown
+The Airbnb Clone Project incorporates several core features that replicate the functionality of a real-world booking platform. Each feature is designed to provide seamless interaction between users, properties, and bookings while ensuring scalability and security.
+
+1. User Management
+Handles user registration, authentication, and profile management. Users can sign up as guests or hosts, securely log in, and update personal details. This feature also ensures role-based access to functionalities.
+
+2. Property Management
+Allows hosts to list, update, and manage their properties. Each property includes details such as location, price, availability, and descriptions. This feature ensures that guests can easily browse and search for properties that meet their needs.
+
+3. Booking System
+Enables guests to book available properties with defined check-in and check-out dates. It handles booking requests, confirmation, cancellations, and updates availability in real-time. This ensures efficient resource utilization and prevents double-booking.
+
+4. Review System
+Guests can leave ratings and comments for properties they’ve stayed in. Reviews provide feedback for hosts and help future guests make informed decisions. This feature enhances trust and transparency within the platform.
+
+5. Payment Integration
+Facilitates secure online payments for bookings. Supports multiple payment methods (e.g., credit card, PayPal) and ensures transactions are processed reliably. Payment records are linked to bookings for accountability and financial tracking.
+
+6. Search and Filtering
+Guests can search properties by location, price range, availability, and amenities. This feature ensures users can quickly find accommodations that best match their preferences.
 
 ## API Security
+Securing the backend APIs is critical to ensure data integrity, protect user privacy, and safeguard financial transactions within the Airbnb Clone Project. The following security measures will be implemented:
+
+1. Authentication
+All users must verify their identity through secure login mechanisms (e.g., JWT tokens or OAuth 2.0). Authentication ensures that only verified users can access the platform and prevents unauthorized access.
+
+2. Authorization
+Role-based access control (RBAC) will be enforced to determine what actions a user can perform (e.g., hosts can list properties, guests can book). Authorization prevents privilege escalation and protects sensitive operations.
+
+3. Data Encryption
+All sensitive data, including user credentials and payment details, will be encrypted in transit (HTTPS/TLS) and at rest (database encryption). This prevents data leaks and ensures privacy.
+
+4. Rate Limiting
+APIs will implement request throttling to limit the number of calls a user or IP can make within a time window. Rate limiting prevents abuse of resources, denial-of-service attacks, and brute-force login attempts.
+
+5. Input Validation & Sanitization
+All user inputs will be validated and sanitized to prevent injection attacks (e.g., SQL injection, XSS). This ensures only safe and expected data enters the system.
+
+6. Secure Payment Handling
+Payment APIs will comply with PCI-DSS standards and rely on secure third-party payment gateways. This ensures financial transactions are handled safely and reduces liability for the platform.
 
 ## CI/CD Pipeline
+A CI/CD (Continuous Integration and Continuous Deployment) pipeline automates the process of building, testing, and deploying the application. It ensures that new code changes are integrated smoothly, tested thoroughly, and deployed reliably to production environments with minimal manual intervention.
+
+Why It’s Important
+
++ Consistency: Automates repetitive tasks, ensuring consistent builds and deployments.
++ Faster Development: Enables quick feedback on new code changes, helping developers identify and fix issues early.
++ Reliability: Reduces human error and ensures each change passes automated tests before going live.
++ Scalability: Supports frequent updates, allowing the project to grow and evolve without disrupting users.
++ Collaboration: Enhances team efficiency by providing a shared, automated workflow for developers, testers, and operations.
+
+In this project, the pipeline will likely use Jenkins and Docker to build, test, and deploy the application seamlessly, ensuring code quality and reliability at every stage.
